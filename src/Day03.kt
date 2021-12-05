@@ -7,7 +7,7 @@ fun computePowerConsumption(filename: String): Int {
     println("Size of input in $filename: " + input.size)
 
     var gammaRate: Int = 0
-    for (i in 0..bitwidth) {
+    for (i in 0 until bitwidth) {
         val sumOfBits: Int = input.sumOf { (it and (1 shl i)) shr i }
         if (sumOfBits > input.size / 2) {
             gammaRate += 1 shl i
